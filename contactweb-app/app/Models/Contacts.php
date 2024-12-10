@@ -10,7 +10,7 @@ class Contacts extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['name', 'contact', 'email'];
+    protected $fillable = ['id', 'name', 'contact', 'email'];
 
     protected $table = 'contacts';
 }

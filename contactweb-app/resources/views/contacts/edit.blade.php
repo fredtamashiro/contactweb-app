@@ -1,19 +1,26 @@
 <x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 sm:leading-3 lg:leading-tight">
+            {{ __('Editar Contato') }}
+        </h2>
+    </x-slot>
 
-    <h1>Editar Contato</h1>
+    <div class="sm:py-4 lg:py-12">
+        <div class="max-w-7xl mx-auto sm:px-1 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="sm:p-3 lg:p-6 text-gray-900">
 
-    <form action="{{ route('contacts.update', $contact->id) }}" method="POST">
-        @csrf
-        @method('PUT')
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" value="{{ $contact->name }}" required>
+                    <x-form.contact action="{{ route('contacts.update',$dados['id']) }}" :dados="$dados" :update="true" />
 
-        <label for="contact">Contato:</label>
-        <input type="text" id="contact" name="contact" value="{{ $contact->contact }}" required>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="{{ $contact->email }}" required>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
 
-        <button type="submit">Salvar</button>
-    </form>
+        });
+    </script>
 </x-app-layout>

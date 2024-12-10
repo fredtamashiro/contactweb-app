@@ -1,3 +1,127 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+
+    .linha-th {
+        @apply border border-gray-400 bg-gray-800 text-gray-100 text-center text-xs sm:p-1 lg:p-2;
+    }
+
+    .botao_plus {
+        @apply bg-gray-900 hover:bg-gray-800 text-white py-1 px-3 rounded;
+    }
+
+    .botao_minus {
+        @apply bg-gray-300 hover:bg-gray-400 text-gray-800 py-1 px-3 rounded;
+    }
+
+    .botao_enviar {
+        @apply border border-blue-900 rounded-md bg-blue-800 hover:bg-blue-700 text-white px-4 py-1;
+    }
+
+    .botao_editar {
+        @apply border border-gray-300 bg-white hover:bg-blue-50 rounded-md px-2 py-0.5;
+    }
+
+    .coluna_2 {
+        @apply w-2/12 py-2;
+    }
+
+    .coluna_4 {
+        @apply w-4/12 py-2;
+    }
+
+    .coluna_5 {
+        @apply w-5/12 py-2;
+    }
+
+    .coluna_6 {
+        @apply w-6/12 py-2;
+    }
+
+    .coluna_8 {
+        @apply w-8/12 py-2;
+    }
+
+    .coluna_12 {
+        @apply w-full py-2;
+    }
+
+    .input_text {
+        @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
+    }
+
+    .input_number {
+        @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
+    }
+
+    .select {
+        @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
+    }
+
+
+    .td_number {
+        @apply w-full border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-sm p-1 text-end;
+    }
+
+    .td_text {
+        @apply w-full border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-sm p-1;
+    }
+
+
+    .bt_cancelar i{
+        @apply text-red-500 hover:text-red-700 cursor-pointer;
+    }
+
+    a.bt_green i {
+        @apply cursor-pointer hover:text-green-600 mr-3;
+    }
+
+    a.bt_red i {
+        @apply cursor-pointer hover:text-red-600;
+    }
+
+    #header {
+        @apply bg-white ;
+    }
+
+    #header .header_row {
+        @apply lg:flex lg:items-center lg:justify-between max-w-7xl mx-auto sm:px-1 lg:px-8 lg:py-5 sm:px-6 ;
+    }
+
+    #header .titulo {
+        @apply min-w-0 flex-1;
+    }
+
+    #header .titulo h2 {
+        @apply font-semibold text-xl text-gray-800 sm:leading-3 lg:leading-tight;
+    }
+
+    #header .coluna_botoes {
+        @apply mt-5 flex lg:ml-4 lg:mt-0;
+    }
+
+    .bt_adicionar {
+        @apply inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600;
+    }
+
+    .tabela {
+        @apply border border-gray-400 ;
+    }
+
+    .tabela th {
+        @apply border border-gray-400 bg-gray-800 text-gray-100 text-center text-xs sm:p-1 lg:p-2;
+    }
+
+    .tabela td {
+        @apply border border-gray-400 sm:text-xs lg:text-sm text-center font-bold p-1;
+    }
+
+    .tabela tr:hover {
+        @apply bg-gray-200;
+    }
+
+
+}

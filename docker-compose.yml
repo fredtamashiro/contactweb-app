@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8080:80"  # Mapeia a porta 80 do container para a 8080 no host
+    volumes:
+      - ./contactweb-app:/var/www/html  # Mapeia todo o diretório do projeto
+    environment:
+      - APACHE_RUN_USER=www-data
+      - APACHE_RUN_GROUP=www-data

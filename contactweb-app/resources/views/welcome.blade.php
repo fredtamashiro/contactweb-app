@@ -53,16 +53,12 @@
                                                 <tr>
                                                     <th>#</th>
                                                     <th>NOME</th>
-                                                    <th>CONTATO</th>
-                                                    <th>E-MAIL</th>
                                                 </tr>
                                             </thead>
                                             @foreach ($contacts as $item)
                                                 <tr>
                                                     <td>{{ $item['id'] }}</td>
                                                     <td class="text-left">{{ $item['name'] }}</td>
-                                                    <td class="text-left">{{ $item['contact'] }}</td>
-                                                    <td class="text-left">{{ $item['email'] }}</td>
                                                 </tr>
                                             @endforeach
                                         </table>

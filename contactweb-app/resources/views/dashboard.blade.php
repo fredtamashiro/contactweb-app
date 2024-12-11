@@ -31,8 +31,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>NOME</th>
-                                <th>CONTATO</th>
-                                <th>E-MAIL</th>
+                                <th>DETALHES</th>
                                 <th>EDITAR</th>
                                 <th>APAGAR</th>
                             </tr>
@@ -41,8 +40,7 @@
                             <tr>
                                 <td>{{ $item['id'] }}</td>
                                 <td class="text-left">{{ $item['name'] }}</td>
-                                <td class="text-left">{{ $item['contact'] }}</td>
-                                <td class="text-left">{{ $item['email'] }}</td>
+                                <td class="text-left"><a href="/contacts/details/{{ $item['id'] }}">Mais Detalhes</a></td>
                                 <td>
                                     <div class="flex justify-center items-center">
                                         <a href="{{ route('contacts.edit', $item['id']) }}" class="">

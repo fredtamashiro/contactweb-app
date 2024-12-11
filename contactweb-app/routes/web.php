@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Contacts\ContactsController;
+use App\Http\Controllers\Contacts\ContactsDetailsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     
     Route::resource('/contacts', ContactsController::class)->only(['create', 'store', 'edit', 'update','destroy']);
+    Route::resource('/contacts/details/{id}', ContactsDetailsController::class)->only(['index']);
 
 });
 
